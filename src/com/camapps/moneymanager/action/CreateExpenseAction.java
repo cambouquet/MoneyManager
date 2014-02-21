@@ -8,9 +8,8 @@ package com.camapps.moneymanager.action;
  *
  */
 public class CreateExpenseAction {
-
+	
 	public void process() {
-		// TODO Auto-generated method stub
 		
 	}
 }

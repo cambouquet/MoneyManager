@@ -16,7 +16,13 @@ public class Console {
 	}
 	
 	public void askForExpense() {
-		
+		System.out.println("Working or not?");
+		dispatch("createExpense", new Object());
+	}
+	
+	protected void dispatch(String event, Object input) {
+		m_dispatcher.saveInput(input);
+		m_dispatcher.dispatch(event);
 	}
 
 }
