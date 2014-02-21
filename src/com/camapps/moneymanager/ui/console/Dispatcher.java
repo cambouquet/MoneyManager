@@ -15,7 +15,7 @@ public class Dispatcher {
 	private CreateExpenseAction createExpenseAction = new CreateExpenseAction();
 	
 	public void dispatch(String event) {
-		
+		System.out.println("..Dispatching event: " + event);
 		createExpenseAction.process();
 	}
 
