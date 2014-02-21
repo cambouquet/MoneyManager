@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.camapps.moneymanager.ui.console;
+package com.camapps.moneymanager.action.dispatcher;
 
 import com.camapps.moneymanager.action.CreateExpenseAction;
 
@@ -12,10 +12,10 @@ import com.camapps.moneymanager.action.CreateExpenseAction;
 public class Dispatcher {
 	private Object m_input = null;
 	
-	private CreateExpenseAction createExpenseAction = new CreateExpenseAction();
+	private CreateExpenseAction createExpenseAction = new CreateExpenseAction(this);
 	
-	public void dispatch(String event) {
-		System.out.println("..Dispatching event: " + event);
+	public void dispatch(DispatcherEvent outEvent) {
+		System.out.println("..Dispatching event: " + outEvent);
 		createExpenseAction.setInput(m_input);
 		createExpenseAction.process();
 	}

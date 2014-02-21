@@ -3,6 +3,9 @@
  */
 package com.camapps.moneymanager.ui.console;
 
+import com.camapps.moneymanager.action.dispatcher.Dispatcher;
+import com.camapps.moneymanager.action.dispatcher.DispatcherEvent;
+
 /**
  * @author Camille
  *
@@ -22,6 +25,6 @@ public class Console {
 	
 	protected void dispatch(String event, Object input) {
 		m_dispatcher.saveInput(input);
-		m_dispatcher.dispatch(event);
+		m_dispatcher.dispatch(new DispatcherEvent(DispatcherEvent.EVENT_TYPE_TO_ACTION, event));
 	}
 }

@@ -3,11 +3,17 @@
  */
 package com.camapps.moneymanager.action;
 
+import com.camapps.moneymanager.action.dispatcher.Dispatcher;
+
 /**
  * @author Camille
  *
  */
 public class StartAction extends Action {
+
+	public StartAction(Dispatcher dispatcher) {
+		super(dispatcher);
+	}
 
 	/* (non-Javadoc)
 	 * @see com.camapps.moneymanager.action.Action#performProcessing()
