@@ -20,8 +20,7 @@ public class StartAction extends Action {
 	 */
 	@Override
 	protected void performProcessing() {
-		// TODO Auto-generated method stub
-
+		setOutEvent("askForNewExpense");
 	}
 
 	@Override

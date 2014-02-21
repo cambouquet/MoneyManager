@@ -8,8 +8,8 @@ package com.camapps.moneymanager.action.dispatcher;
  *
  */
 public class DispatcherEvent {
-	public static final Integer EVENT_TYPE_TO_ACTION = 0;
-	public static final Integer EVENT_TYPE_TO_UI = 1;
+	public static final int EVENT_TYPE_TO_ACTION = 0;
+	public static final int EVENT_TYPE_TO_UI = 1;
 	
 	private Integer m_type = null;
 	
