@@ -21,7 +21,7 @@ public class Console {
 	}
 	
 	public void askForExpense() {
-		System.out.println("Working or not?");
+		System.err.println("Working or not?");
 		dispatch("createExpense", "Yes");
 	}
 	

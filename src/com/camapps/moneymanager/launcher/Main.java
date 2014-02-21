@@ -19,13 +19,16 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Hello !");
-		System.out.println("----------------------------");
+		System.out.println("---------------------------------\n");
 
 		ConsoleDispatcher dispatcher = new ConsoleDispatcher();
 		Console console = new Console(dispatcher);
 		
 		StartAction startAction = new StartAction(dispatcher);
 		startAction.process();
+		
+		System.out.println("\n---------------------------------");
+		System.out.println("Thanks for using this beautiful programm");
 	}
 
 }

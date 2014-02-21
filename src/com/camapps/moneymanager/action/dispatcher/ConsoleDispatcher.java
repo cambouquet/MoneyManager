@@ -21,4 +21,9 @@ public class ConsoleDispatcher extends Dispatcher {
 		m_console.setOutput(output);
 	}
 
+	@Override
+	protected void processUIUpdate() {
+		m_console.askForExpense();
+	}
+
 }

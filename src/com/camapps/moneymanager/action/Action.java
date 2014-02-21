@@ -20,6 +20,7 @@ public abstract class Action {
 	}
 	
 	public void process() {
+		System.out.println("--performProcessing: " + this.getClass().getSimpleName());
 		performProcessing();
 		m_dispatcher.dispatch(m_outEvent);
 	}

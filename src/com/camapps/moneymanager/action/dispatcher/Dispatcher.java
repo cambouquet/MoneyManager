@@ -17,18 +17,25 @@ public abstract class Dispatcher {
 	private CreateExpenseAction createExpenseAction = new CreateExpenseAction(this);
 	
 	public void dispatch(DispatcherEvent event) {
-		System.out.println("..Dispatching event: " + event);
+		if (event == null) {
+			return;
+		}
+		
+		System.out.println("..Dispatching event: " + event.getName());
 		
 		switch (event.getType()) {
 		case DispatcherEvent.EVENT_TYPE_TO_ACTION:
 			createExpenseAction.setInput(m_input);
+			createExpenseAction.process();
 			break;
 		case DispatcherEvent.EVENT_TYPE_TO_UI:
 			setOutput(m_output);
+			processUIUpdate();
 			break;
 		}
-		createExpenseAction.process();
 	}
+
+	protected abstract void processUIUpdate();
 
 	protected abstract void setOutput(Object output);
 	
