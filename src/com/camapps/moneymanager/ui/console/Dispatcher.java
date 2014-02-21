@@ -16,6 +16,7 @@ public class Dispatcher {
 	
 	public void dispatch(String event) {
 		System.out.println("..Dispatching event: " + event);
+		createExpenseAction.setInput(m_input);
 		createExpenseAction.process();
 	}
 

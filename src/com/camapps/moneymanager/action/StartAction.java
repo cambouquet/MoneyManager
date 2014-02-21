@@ -7,12 +7,15 @@ package com.camapps.moneymanager.action;
  * @author Camille
  *
  */
-public class CreateExpenseAction extends Action {
+public class StartAction extends Action {
 
+	/* (non-Javadoc)
+	 * @see com.camapps.moneymanager.action.Action#performProcessing()
+	 */
 	@Override
 	protected void performProcessing() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -20,4 +23,5 @@ public class CreateExpenseAction extends Action {
 		// TODO Auto-generated method stub
 		
 	}
+
 }
